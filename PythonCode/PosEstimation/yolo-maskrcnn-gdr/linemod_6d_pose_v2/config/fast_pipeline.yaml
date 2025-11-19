@@ -1,0 +1,33 @@
+# Fast Pipeline Configuration
+# 快速检测流程 - 仅YOLO检测，无分割和姿态估计
+# 性能目标: 50+ FPS
+
+# Inherit from default config
+_base_: "default_config.yaml"
+
+# Override settings for fast pipeline
+detection:
+  confidence_threshold: 0.4  # Slightly higher for fewer false positives
+  device: "cuda"  # Use GPU for speed
+
+segmentation:
+  enable: false  # Disable segmentation
+
+pose_estimation:
+  enable: false  # Disable pose estimation
+
+visualization:
+  show_bbox: true
+  show_mask: false
+  show_3d_axes: false
+  show_3d_bbox: false
+  show_info_panel: true
+  info_panel_alpha: 0.8
+
+performance:
+  profile_time: true
+  enable_multithreading: true
+  num_workers: 2
+
+logging:
+  level: "WARNING"  # Less verbose for speed

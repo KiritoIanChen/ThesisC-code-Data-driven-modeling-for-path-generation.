@@ -1,0 +1,41 @@
+# LineMOD 6D Pose Estimation V2 - Dependencies
+
+# Core dependencies
+numpy>=1.21.0
+opencv-python>=4.5.0
+pyyaml>=5.4.0
+scipy>=1.7.0
+
+# Deep learning frameworks
+torch>=1.13.0
+torchvision>=0.14.0
+ultralytics>=8.0.0  # YOLO
+
+# Optional: Advanced segmentation
+# segment-anything  # Uncomment if using SAM
+# detectron2  # Uncomment if using MaskRCNN (see install instructions)
+
+# Visualization
+matplotlib>=3.3.0
+pillow>=8.0.0
+
+# 3D processing
+open3d>=0.13.0  # For 3D model loading and visualization
+trimesh>=3.9.0  # Alternative 3D mesh processing
+
+# Utilities
+tqdm>=4.60.0  # Progress bars
+colorlog>=6.0.0  # Colored logging
+
+# Testing
+pytest>=7.0.0
+pytest-cov>=3.0.0
+
+# Development
+black>=22.0.0  # Code formatting
+flake8>=4.0.0  # Linting
+mypy>=0.950  # Type checking
+
+# Optional: ROS integration
+# rospkg  # Uncomment if using ROS
+# rospy  # Uncomment if using ROS

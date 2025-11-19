@@ -1,0 +1,557 @@
+{
+  "test_info": {
+    "total_images": 39,
+    "successful_images": 39,
+    "failed_images_count": 0,
+    "success_rate": "100.00%"
+  },
+  "performance_details": [
+    {
+      "object_id": 1,
+      "object_name": "ape",
+      "image_name": "0000.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 3.798211097717285,
+        "pose_estimation": 0.257826566696167,
+        "visualization": 0.005367755889892578,
+        "total": 4.061405420303345
+      },
+      "output_file": "ape_0000"
+    },
+    {
+      "object_id": 1,
+      "object_name": "ape",
+      "image_name": "0005.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.03864622116088867,
+        "pose_estimation": 0.15731334686279297,
+        "visualization": 0.0016329288482666016,
+        "total": 0.20000815391540527
+      },
+      "output_file": "ape_0005"
+    },
+    {
+      "object_id": 1,
+      "object_name": "ape",
+      "image_name": "0010.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.02229928970336914,
+        "pose_estimation": 0.10282659530639648,
+        "visualization": 0.0,
+        "total": 0.12708711624145508
+      },
+      "output_file": "ape_0010"
+    },
+    {
+      "object_id": 2,
+      "object_name": "benchvise",
+      "image_name": "0000.png",
+      "num_detections": 6,
+      "num_poses": 6,
+      "processing_time": {
+        "detection": 0.018194913864135742,
+        "pose_estimation": 0.20777487754821777,
+        "visualization": 0.002886056900024414,
+        "total": 0.23228025436401367
+      },
+      "output_file": "benchvise_0000"
+    },
+    {
+      "object_id": 2,
+      "object_name": "benchvise",
+      "image_name": "0005.png",
+      "num_detections": 6,
+      "num_poses": 6,
+      "processing_time": {
+        "detection": 0.019336700439453125,
+        "pose_estimation": 0.19859886169433594,
+        "visualization": 0.002002716064453125,
+        "total": 0.2246394157409668
+      },
+      "output_file": "benchvise_0005"
+    },
+    {
+      "object_id": 2,
+      "object_name": "benchvise",
+      "image_name": "0010.png",
+      "num_detections": 5,
+      "num_poses": 5,
+      "processing_time": {
+        "detection": 0.01733541488647461,
+        "pose_estimation": 0.14732623100280762,
+        "visualization": 0.0013840198516845703,
+        "total": 0.16800451278686523
+      },
+      "output_file": "benchvise_0010"
+    },
+    {
+      "object_id": 4,
+      "object_name": "cam",
+      "image_name": "0000.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.0197296142578125,
+        "pose_estimation": 0.12154006958007812,
+        "visualization": 0.0011026859283447266,
+        "total": 0.14380455017089844
+      },
+      "output_file": "cam_0000"
+    },
+    {
+      "object_id": 4,
+      "object_name": "cam",
+      "image_name": "0005.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.01564478874206543,
+        "pose_estimation": 0.06083416938781738,
+        "visualization": 0.0005052089691162109,
+        "total": 0.08069443702697754
+      },
+      "output_file": "cam_0005"
+    },
+    {
+      "object_id": 4,
+      "object_name": "cam",
+      "image_name": "0010.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.013303279876708984,
+        "pose_estimation": 0.09463286399841309,
+        "visualization": 0.0012085437774658203,
+        "total": 0.11451196670532227
+      },
+      "output_file": "cam_0010"
+    },
+    {
+      "object_id": 5,
+      "object_name": "can",
+      "image_name": "0000.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.014756917953491211,
+        "pose_estimation": 0.08873152732849121,
+        "visualization": 0.0017991065979003906,
+        "total": 0.10729336738586426
+      },
+      "output_file": "can_0000"
+    },
+    {
+      "object_id": 5,
+      "object_name": "can",
+      "image_name": "0005.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.014682531356811523,
+        "pose_estimation": 0.12091755867004395,
+        "visualization": 0.001997709274291992,
+        "total": 0.1396012306213379
+      },
+      "output_file": "can_0005"
+    },
+    {
+      "object_id": 5,
+      "object_name": "can",
+      "image_name": "0010.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.014005422592163086,
+        "pose_estimation": 0.08768868446350098,
+        "visualization": 0.0015690326690673828,
+        "total": 0.10577988624572754
+      },
+      "output_file": "can_0010"
+    },
+    {
+      "object_id": 6,
+      "object_name": "cat",
+      "image_name": "0000.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.013617515563964844,
+        "pose_estimation": 0.0694422721862793,
+        "visualization": 0.0019936561584472656,
+        "total": 0.08916735649108887
+      },
+      "output_file": "cat_0000"
+    },
+    {
+      "object_id": 6,
+      "object_name": "cat",
+      "image_name": "0005.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.014482975006103516,
+        "pose_estimation": 0.0849466323852539,
+        "visualization": 0.0020046234130859375,
+        "total": 0.10593509674072266
+      },
+      "output_file": "cat_0005"
+    },
+    {
+      "object_id": 6,
+      "object_name": "cat",
+      "image_name": "0010.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.015509843826293945,
+        "pose_estimation": 0.0895838737487793,
+        "visualization": 0.0015077590942382812,
+        "total": 0.11026406288146973
+      },
+      "output_file": "cat_0010"
+    },
+    {
+      "object_id": 8,
+      "object_name": "driller",
+      "image_name": "0000.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.014585733413696289,
+        "pose_estimation": 0.09025144577026367,
+        "visualization": 0.005388021469116211,
+        "total": 0.11220693588256836
+      },
+      "output_file": "driller_0000"
+    },
+    {
+      "object_id": 8,
+      "object_name": "driller",
+      "image_name": "0005.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.01360940933227539,
+        "pose_estimation": 0.09647822380065918,
+        "visualization": 0.001009225845336914,
+        "total": 0.11732840538024902
+      },
+      "output_file": "driller_0005"
+    },
+    {
+      "object_id": 8,
+      "object_name": "driller",
+      "image_name": "0010.png",
+      "num_detections": 1,
+      "num_poses": 1,
+      "processing_time": {
+        "detection": 0.017519474029541016,
+        "pose_estimation": 0.03262186050415039,
+        "visualization": 0.0010044574737548828,
+        "total": 0.05114579200744629
+      },
+      "output_file": "driller_0010"
+    },
+    {
+      "object_id": 9,
+      "object_name": "duck",
+      "image_name": "0000.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.014554977416992188,
+        "pose_estimation": 0.05826878547668457,
+        "visualization": 0.0010051727294921875,
+        "total": 0.07639932632446289
+      },
+      "output_file": "duck_0000"
+    },
+    {
+      "object_id": 9,
+      "object_name": "duck",
+      "image_name": "0005.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.01636481285095215,
+        "pose_estimation": 0.06248283386230469,
+        "visualization": 0.0,
+        "total": 0.08087658882141113
+      },
+      "output_file": "duck_0005"
+    },
+    {
+      "object_id": 9,
+      "object_name": "duck",
+      "image_name": "0010.png",
+      "num_detections": 1,
+      "num_poses": 1,
+      "processing_time": {
+        "detection": 0.014813423156738281,
+        "pose_estimation": 0.030907869338989258,
+        "visualization": 0.0,
+        "total": 0.04953956604003906
+      },
+      "output_file": "duck_0010"
+    },
+    {
+      "object_id": 10,
+      "object_name": "eggbox",
+      "image_name": "0000.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.015003442764282227,
+        "pose_estimation": 0.09479546546936035,
+        "visualization": 0.0021848678588867188,
+        "total": 0.11536765098571777
+      },
+      "output_file": "eggbox_0000"
+    },
+    {
+      "object_id": 10,
+      "object_name": "eggbox",
+      "image_name": "0005.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.015951871871948242,
+        "pose_estimation": 0.09918975830078125,
+        "visualization": 0.001018524169921875,
+        "total": 0.11971831321716309
+      },
+      "output_file": "eggbox_0005"
+    },
+    {
+      "object_id": 10,
+      "object_name": "eggbox",
+      "image_name": "0010.png",
+      "num_detections": 5,
+      "num_poses": 5,
+      "processing_time": {
+        "detection": 0.01772141456604004,
+        "pose_estimation": 0.16695261001586914,
+        "visualization": 0.0019996166229248047,
+        "total": 0.19376611709594727
+      },
+      "output_file": "eggbox_0010"
+    },
+    {
+      "object_id": 11,
+      "object_name": "glue",
+      "image_name": "0000.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.01825881004333496,
+        "pose_estimation": 0.12693572044372559,
+        "visualization": 0.002710103988647461,
+        "total": 0.1509242057800293
+      },
+      "output_file": "glue_0000"
+    },
+    {
+      "object_id": 11,
+      "object_name": "glue",
+      "image_name": "0005.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.017270326614379883,
+        "pose_estimation": 0.08936023712158203,
+        "visualization": 0.0022296905517578125,
+        "total": 0.11087608337402344
+      },
+      "output_file": "glue_0005"
+    },
+    {
+      "object_id": 11,
+      "object_name": "glue",
+      "image_name": "0010.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.01573348045349121,
+        "pose_estimation": 0.09432768821716309,
+        "visualization": 0.0015063285827636719,
+        "total": 0.11269712448120117
+      },
+      "output_file": "glue_0010"
+    },
+    {
+      "object_id": 12,
+      "object_name": "holepuncher",
+      "image_name": "0000.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.013763189315795898,
+        "pose_estimation": 0.06043839454650879,
+        "visualization": 0.0012891292572021484,
+        "total": 0.0764918327331543
+      },
+      "output_file": "holepuncher_0000"
+    },
+    {
+      "object_id": 12,
+      "object_name": "holepuncher",
+      "image_name": "0005.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.015147686004638672,
+        "pose_estimation": 0.09334325790405273,
+        "visualization": 0.0016803741455078125,
+        "total": 0.11217498779296875
+      },
+      "output_file": "holepuncher_0005"
+    },
+    {
+      "object_id": 12,
+      "object_name": "holepuncher",
+      "image_name": "0010.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.013100147247314453,
+        "pose_estimation": 0.06170535087585449,
+        "visualization": 0.005087852478027344,
+        "total": 0.08089828491210938
+      },
+      "output_file": "holepuncher_0010"
+    },
+    {
+      "object_id": 13,
+      "object_name": "iron",
+      "image_name": "0000.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.015575408935546875,
+        "pose_estimation": 0.11920809745788574,
+        "visualization": 0.0010387897491455078,
+        "total": 0.13977503776550293
+      },
+      "output_file": "iron_0000"
+    },
+    {
+      "object_id": 13,
+      "object_name": "iron",
+      "image_name": "0005.png",
+      "num_detections": 3,
+      "num_poses": 3,
+      "processing_time": {
+        "detection": 0.01611018180847168,
+        "pose_estimation": 0.09484338760375977,
+        "visualization": 0.001001596450805664,
+        "total": 0.11420941352844238
+      },
+      "output_file": "iron_0005"
+    },
+    {
+      "object_id": 13,
+      "object_name": "iron",
+      "image_name": "0010.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.01468968391418457,
+        "pose_estimation": 0.12758636474609375,
+        "visualization": 0.0020058155059814453,
+        "total": 0.14507508277893066
+      },
+      "output_file": "iron_0010"
+    },
+    {
+      "object_id": 14,
+      "object_name": "lamp",
+      "image_name": "0000.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.018691062927246094,
+        "pose_estimation": 0.12679624557495117,
+        "visualization": 0.0014281272888183594,
+        "total": 0.14951658248901367
+      },
+      "output_file": "lamp_0000"
+    },
+    {
+      "object_id": 14,
+      "object_name": "lamp",
+      "image_name": "0005.png",
+      "num_detections": 5,
+      "num_poses": 5,
+      "processing_time": {
+        "detection": 0.016576290130615234,
+        "pose_estimation": 0.1537337303161621,
+        "visualization": 0.002005338668823242,
+        "total": 0.17469072341918945
+      },
+      "output_file": "lamp_0005"
+    },
+    {
+      "object_id": 14,
+      "object_name": "lamp",
+      "image_name": "0010.png",
+      "num_detections": 5,
+      "num_poses": 5,
+      "processing_time": {
+        "detection": 0.013398408889770508,
+        "pose_estimation": 0.16003918647766113,
+        "visualization": 0.0010082721710205078,
+        "total": 0.17820239067077637
+      },
+      "output_file": "lamp_0010"
+    },
+    {
+      "object_id": 15,
+      "object_name": "phone",
+      "image_name": "0000.png",
+      "num_detections": 4,
+      "num_poses": 4,
+      "processing_time": {
+        "detection": 0.0169830322265625,
+        "pose_estimation": 0.12275218963623047,
+        "visualization": 0.0009992122650146484,
+        "total": 0.14274883270263672
+      },
+      "output_file": "phone_0000"
+    },
+    {
+      "object_id": 15,
+      "object_name": "phone",
+      "image_name": "0005.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.017769575119018555,
+        "pose_estimation": 0.06298422813415527,
+        "visualization": 0.0,
+        "total": 0.08307409286499023
+      },
+      "output_file": "phone_0005"
+    },
+    {
+      "object_id": 15,
+      "object_name": "phone",
+      "image_name": "0010.png",
+      "num_detections": 2,
+      "num_poses": 2,
+      "processing_time": {
+        "detection": 0.015928983688354492,
+        "pose_estimation": 0.06180238723754883,
+        "visualization": 0.0,
+        "total": 0.08003807067871094
+      },
+      "output_file": "phone_0010"
+    }
+  ],
+  "failed_images": []
+}

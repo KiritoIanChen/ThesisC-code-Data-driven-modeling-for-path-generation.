@@ -1,0 +1,48 @@
+# Accurate Pipeline Configuration
+# 高精度姿态估计流程 - YOLO + SAM + PnP
+# 性能目标: 3-5 FPS, 高精度
+
+# Inherit from default config
+_base_: "default_config.yaml"
+
+# Override settings for accurate pipeline
+detection:
+  confidence_threshold: 0.25  # Lower threshold for better recall
+  device: "cuda"
+
+segmentation:
+  enable: true
+  method: "sam"  # Use SAM for best segmentation quality
+  
+  sam:
+    model_type: "vit_h"  # Largest model for best quality
+    pred_iou_thresh: 0.90  # Higher threshold for quality
+    stability_score_thresh: 0.97
+
+pose_estimation:
+  method: "pnp"
+  use_mask: true
+  
+  pnp:
+    use_ransac: true
+    ransac_iterations: 2000  # More iterations for robustness
+    ransac_reprojection_error: 3.0  # Stricter threshold
+    refine_iterations: 20  # More refinement iterations
+
+visualization:
+  show_bbox: true
+  show_mask: true
+  show_3d_axes: true
+  show_3d_bbox: true
+  show_mesh_overlay: false
+  show_info_panel: true
+
+performance:
+  profile_time: true
+  enable_multithreading: false  # Disable for accuracy
+
+logging:
+  level: "INFO"
+
+debug:
+  save_intermediate_results: true

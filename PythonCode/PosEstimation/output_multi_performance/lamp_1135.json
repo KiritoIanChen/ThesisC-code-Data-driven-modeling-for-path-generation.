@@ -1,0 +1,13 @@
+{
+  "detections": [],
+  "num_masks": 0,
+  "poses": [],
+  "processing_time": {
+    "detection": 0.01206064224243164
+  },
+  "image_shape": [
+    480,
+    640,
+    3
+  ]
+}

@@ -1,0 +1,272 @@
+# LineMOD 6D Pose Estimation V2 - Default Configuration
+
+project:
+  name: "LineMOD 6D Pose Estimation V2"
+  version: "2.0.0"
+  description: "Modular 6D pose estimation system for LineMOD objects"
+
+# Camera parameters (LineMOD dataset default)
+camera:
+  intrinsics:
+    fx: 572.4114
+    fy: 573.57043
+    cx: 325.2611
+    cy: 242.04899
+  resolution:
+    width: 640
+    height: 480
+  distortion: [0.0, 0.0, 0.0, 0.0, 0.0]  # k1, k2, p1, p2, k3
+
+# Object Detection Configuration
+detection:
+  model_type: "yolo"  # Currently only YOLO supported
+  model_path: "../../yolo_linemod_training/linemod_yolo3/weights/best.pt"
+  
+  # Detection parameters
+  confidence_threshold: 0.3
+  nms_threshold: 0.45
+  max_detections: 10
+  
+  # Device configuration
+  device: "cuda"  # "cuda" or "cpu"
+  
+  # LineMOD classes (13 objects)
+  classes:
+    - name: "ape"
+      id: 0
+    - name: "benchvise"
+      id: 1
+    - name: "cam"
+      id: 2
+    - name: "can"
+      id: 3
+    - name: "cat"
+      id: 4
+    - name: "driller"
+      id: 5
+    - name: "duck"
+      id: 6
+    - name: "eggbox"
+      id: 7
+    - name: "glue"
+      id: 8
+    - name: "holepuncher"
+      id: 9
+    - name: "iron"
+      id: 10
+    - name: "lamp"
+      id: 11
+    - name: "phone"
+      id: 12
+
+# Instance Segmentation Configuration
+segmentation:
+  enable: true
+  method: "simplified"  # Options: "simplified", "sam", "maskrcnn"
+  
+  # Simplified segmentation
+  simplified:
+    use_bbox_expansion: true
+    expansion_factor: 1.1
+    morphology_kernel_size: 5
+  
+  # SAM (Segment Anything Model)
+  sam:
+    model_type: "vit_h"  # Options: "vit_h", "vit_l", "vit_b"
+    checkpoint: "path/to/sam_vit_h_4b8939.pth"
+    points_per_side: 32
+    pred_iou_thresh: 0.88
+    stability_score_thresh: 0.95
+  
+  # Mask R-CNN
+  maskrcnn:
+    model_path: "path/to/maskrcnn_linemod.pth"
+    confidence_threshold: 0.5
+  
+  # Post-processing
+  min_mask_area: 100  # pixels
+  max_mask_area: 50000  # pixels
+  smooth_mask: true
+  fill_holes: true
+
+# 6D Pose Estimation Configuration
+pose_estimation:
+  method: "pnp"  # Options: "pnp", "gdrnet"
+  use_mask: true
+  use_depth: false  # Set to true if depth available
+  
+  # PnP solver configuration
+  pnp:
+    algorithm: "EPNP"  # Options: "ITERATIVE", "EPNP", "P3P", "AP3P"
+    use_ransac: true
+    ransac_iterations: 1000
+    ransac_reprojection_error: 5.0  # pixels
+    ransac_confidence: 0.99
+    refine_iterations: 10
+    
+    # Correspondence method
+    correspondence_method: "bbox"  # Options: "bbox", "keypoints", "contour"
+    num_correspondences: 8  # For bbox method
+  
+  # GDR-Net configuration
+  gdrnet:
+    model_path: "path/to/gdrnet_linemod.pth"
+    use_refinement: true
+    refinement_iterations: 5
+    batch_size: 1
+
+# 3D Object Models Configuration
+models:
+  models_dir: "./models/linemod_models"
+  load_mesh: true
+  load_keypoints: true
+  
+  # Model information
+  objects:
+    ape:
+      id: 1
+      diameter: 102.0  # mm
+      mesh_file: "ape.ply"
+      keypoints_file: "ape_keypoints.txt"
+    benchvise:
+      id: 2
+      diameter: 247.0
+      mesh_file: "benchvise.ply"
+      keypoints_file: "benchvise_keypoints.txt"
+    cam:
+      id: 4
+      diameter: 172.0
+      mesh_file: "camera.ply"
+      keypoints_file: "camera_keypoints.txt"
+    can:
+      id: 5
+      diameter: 202.0
+      mesh_file: "can.ply"
+      keypoints_file: "can_keypoints.txt"
+    cat:
+      id: 6
+      diameter: 154.0
+      mesh_file: "cat.ply"
+      keypoints_file: "cat_keypoints.txt"
+    driller:
+      id: 8
+      diameter: 262.0
+      mesh_file: "driller.ply"
+      keypoints_file: "driller_keypoints.txt"
+    duck:
+      id: 9
+      diameter: 109.0
+      mesh_file: "duck.ply"
+      keypoints_file: "duck_keypoints.txt"
+    eggbox:
+      id: 10
+      diameter: 164.0
+      mesh_file: "eggbox.ply"
+      keypoints_file: "eggbox_keypoints.txt"
+    glue:
+      id: 11
+      diameter: 176.0
+      mesh_file: "glue.ply"
+      keypoints_file: "glue_keypoints.txt"
+    holepuncher:
+      id: 12
+      diameter: 146.0
+      mesh_file: "holepuncher.ply"
+      keypoints_file: "holepuncher_keypoints.txt"
+    iron:
+      id: 13
+      diameter: 143.0
+      mesh_file: "iron.ply"
+      keypoints_file: "iron_keypoints.txt"
+    lamp:
+      id: 14
+      diameter: 284.0
+      mesh_file: "lamp.ply"
+      keypoints_file: "lamp_keypoints.txt"
+    phone:
+      id: 15
+      diameter: 213.0
+      mesh_file: "phone.ply"
+      keypoints_file: "phone_keypoints.txt"
+
+# Visualization Configuration
+visualization:
+  # 2D visualization
+  show_bbox: true
+  show_mask: true
+  show_labels: true
+  show_confidence: true
+  
+  # 3D visualization
+  show_3d_axes: true
+  show_3d_bbox: true
+  show_mesh_overlay: false  # Requires mesh loading
+  
+  # Axes configuration
+  axes_length: 50.0  # mm
+  axes_thickness: 3  # pixels
+  
+  # Colors (BGR format)
+  colors:
+    bbox: [0, 255, 0]  # Green
+    mask: [255, 255, 0]  # Cyan
+    axes_x: [0, 0, 255]  # Red
+    axes_y: [0, 255, 0]  # Green
+    axes_z: [255, 0, 0]  # Blue
+    bbox_3d: [0, 165, 255]  # Orange
+    text: [255, 255, 255]  # White
+    background: [0, 0, 0]  # Black
+  
+  # Info panel
+  show_info_panel: true
+  info_panel_position: "top_left"  # "top_left", "top_right", "bottom_left", "bottom_right"
+  info_panel_alpha: 0.7
+  
+  # Output
+  save_results: true
+  output_dir: "./results"
+  output_format: "jpg"  # "jpg", "png"
+  output_quality: 95  # For jpg, 0-100
+
+# Performance Configuration
+performance:
+  profile_time: true
+  log_processing_times: true
+  enable_multithreading: false  # Set to true for batch processing
+  num_workers: 4  # For multithreading
+  
+  # Memory management
+  clear_cache_frequency: 10  # Clear GPU cache every N frames
+  max_gpu_memory: "8GB"  # Maximum GPU memory to use
+
+# Logging Configuration
+logging:
+  level: "INFO"  # Options: "DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"
+  save_logs: true
+  log_file: "./logs/pipeline.log"
+  log_format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  colored_output: true
+
+# Evaluation Configuration (for testing)
+evaluation:
+  metrics:
+    - "ADD"  # Average Distance of Model Points
+    - "ADD-S"  # ADD-S for symmetric objects
+    - "2D Projection"  # 2D reprojection error
+    - "5cm5deg"  # 5cm 5degree criterion
+  
+  add_threshold: 0.1  # 10% of object diameter
+  projection_threshold: 5.0  # pixels
+  
+  # Ground truth
+  load_ground_truth: false
+  ground_truth_format: "bop"  # "bop" or "linemod"
+  ground_truth_dir: "./ground_truth"
+
+# Debug Configuration
+debug:
+  save_intermediate_results: false
+  intermediate_results_dir: "./debug"
+  visualize_each_step: false
+  verbose_output: false
+  show_errors: true
